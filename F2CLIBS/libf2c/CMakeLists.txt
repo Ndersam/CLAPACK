@@ -44,11 +44,11 @@ if(UNIX)
 endif()
 set_target_properties(arithchk PROPERTIES COMPILE_DEFINITIONS 
   "NO_FPINIT;NO_LONG_LONG")
-ADD_CUSTOM_COMMAND(
-   OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/arith.h
-   COMMAND arithchk > ${CMAKE_CURRENT_BINARY_DIR}/arith.h
-   DEPENDS arithchk
-   )
+# ADD_CUSTOM_COMMAND(
+#    OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/arith.h
+#    COMMAND arithchk > ${CMAKE_CURRENT_BINARY_DIR}/arith.h
+#    DEPENDS arithchk
+#    )
 
 
 set(OFILES  ${MISC} ${POW} ${CX} ${DCX} ${REAL} ${DBL} ${INT} 
